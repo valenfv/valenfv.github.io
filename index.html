@@ -11,7 +11,7 @@ p {
 </style>
 </head>
 <body>
-<p> <pepe id="dias"></pepe> dias para USA 2020</p>
+<p> <pepe id="dias"></pepe> para USA 2020</p>
 
 
 <script>
@@ -34,7 +34,7 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("dias").innerHTML = days;
+  document.getElementById("dias").innerHTML = days + " dias, " + hours + " horas y " + minutes + " minutos";
     
   // If the count down is over, write some text 
   if (distance < 0) {
