@@ -16,12 +16,13 @@ p {
 
 <script>
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 10, 2019 15:37:25").getTime();
+var countDownDate = new Date("Dec 10, 2019 00:00:00").getTime();
 function erre() {
 
   // Get today's date and time
   var now = new Date().getTime();
-    
+  //var now1 = new Date();
+  //console.log(now1.toString());
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
     
@@ -32,17 +33,17 @@ function erre() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("dias").innerHTML = days + " dias, " + hours + " horas y " + minutes + " minutos";
+  document.getElementById("dias").innerHTML = days + " dias, " + hours + " horas, " + minutes + " minutos y " + seconds + " segundos";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "EXPIRED";
-  }
+  }    
 }
 erre();
 // Update the count down every 1 second
-var x = setInterval(erre(), 1000);
+var x = setInterval(erre, 1000);
 </script>
 
 </body>
