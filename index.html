@@ -27,6 +27,20 @@ Your browser does not support the audio element.
 
 <script>
 
+function random_bg_color() {
+	window.setInterval(function(){
+		var x = Math.floor(Math.random() * 256);
+		var y = Math.floor(Math.random() * 256);
+		var z = Math.floor(Math.random() * 256);
+		var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+		console.log(bgColor);
+  
+		document.body.style.background = bgColor;
+	}, 100);
+}
+
+random_bg_color();
+
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 12, 2019 12:00:00").getTime();
 function erre() {
